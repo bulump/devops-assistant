@@ -31,7 +31,7 @@ class DevOpsAIAgent:
         prompt = self._build_analysis_prompt(workflow_analysis)
 
         message = self.client.messages.create(
-            model="claude-sonnet-4-20250514",
+            model="claude-sonnet-4-5-20250929",
             max_tokens=2000,
             messages=[
                 {"role": "user", "content": prompt}
@@ -55,7 +55,7 @@ class DevOpsAIAgent:
         prompt = self._build_troubleshooting_prompt(workflow_analysis, error_logs)
 
         message = self.client.messages.create(
-            model="claude-sonnet-4-20250514",
+            model="claude-sonnet-4-5-20250929",
             max_tokens=2500,
             messages=[
                 {"role": "user", "content": prompt}
@@ -101,7 +101,7 @@ Focus on:
 """
 
         message = self.client.messages.create(
-            model="claude-sonnet-4-20250514",
+            model="claude-sonnet-4-5-20250929",
             max_tokens=3000,
             messages=[
                 {"role": "user", "content": prompt}
